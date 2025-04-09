@@ -1,0 +1,24 @@
+<ion-header translucent>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/landing"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">{{ breed?.name }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <div class="image-container">
+    <img *ngIf="breed?.image?.url" [src]="breed.image.url" class="breed-image" />
+  </div>
+  
+
+  <ion-card class="scrollable-card">
+    <ion-card-content>
+      <h2>Origin: {{ breed?.origin }}</h2>
+      <h2>Intelligence: 🧠 {{ breed?.intelligence }}/5</h2>
+      <p>{{ breed?.description }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
